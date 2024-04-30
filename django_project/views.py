@@ -1,7 +1,7 @@
-from django.http import HttpResponse
-import requests
+#from django.http import HttpResponse
+#import requests
 from django.shortcuts import render
-from ipware import get_client_ip
+#from ipware import get_client_ip
 from pandas import pandas as pd
 
 
