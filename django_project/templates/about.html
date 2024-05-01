@@ -33,71 +33,17 @@
       margin-left: 0px;
       padding-left: 0px;
     }
-
-    .table {
-      font-family: georgia;
-      border-top: 4px solid;
-      border-left: 4px solid;
-      border-bottom: 4px solid;
-      border-right: 4px solid;
-    }
     
   </style>
 
     <form class="container-fluid">
-        <button class="btn"> <span class="logo-format" >Yes!Houses</span></button>
-        <button class="btn btn-outline-dark btn-space" style="width: 150px; border: solid 5px; background-color: #C4EBFF"><a href="../../index.html" >Home</a></button>
+        <button class="btn"> <span class="logo-format" >Yes!Houses</span><a href="index.html" >Home</a></button>
+        <button class="btn btn-outline-dark btn-space" style="width: 150px; border: solid 5px; background-color: #C4EBFF"><a href="index.html" >Home</a></button>
         <button class="btn btn-outline-dark m-1" style="width: 150px; border: solid 3px; background-color: #C4EBFF" type="button"><a href="about.html" >About</a></button>
       </form>
     </nav>
 
-    <div class="container text-center" style="background-color: transparent;">
-      <div class="row" style="background-color: transparent;">
-        <div class="col" style="background-color: transparent;">
-          
-          <table class="table" >
-            <thead>
-            <tr> 
-                <th scope="col">States</th>
-                <th scope="col">Dates</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for state in States %}
-              {% for date in Dates %}
-              <tr>
-                <!-- <th scope="row">1</th> -->
-                <td>{{state}}</td>
-                <td>{{date}}</td>
-              </tr>
-              {% endfor %}
-              {% endfor %}
-
-            </tbody>
-          </table>
-          
-        </div>
-        <div class="col">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Housing Prices</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for price in Prices %}
-              <tr>
-                <td>${{price}}</td>
-              </tr>
-              {% endfor %}
-
-            </tbody>
-          </table>
-            
-        </div>
-      </div>
-    </div>
-
+    <h1>Hello World!</h1>
     
     
 
