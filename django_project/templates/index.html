@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Yes!Houses</title>
+    <title>Real!Estate</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
@@ -23,16 +23,6 @@
       transform: scale(1);
       transform-origin: 0 0;
     }
-    .logo-format {
-      font-family: georgia;
-      font-size: 44pt;
-      font-style: italic; 
-      border-top: 4px solid;
-      border-bottom: 4px solid;
-      margin-right: 50px;
-      margin-left: 0px;
-      padding-left: 0px;
-    }
 
     .table {
       font-family: georgia;
@@ -41,16 +31,60 @@
       border-bottom: 4px solid;
       border-right: 4px solid;
     }
-    
+    .header {
+      font-family: georgia;
+      font-size: 44pt;
+      font-style: italic; 
+      border-top: 4px solid;
+      border-bottom: 4px solid;
+      margin-right: 50px;
+      margin-left: 50px;
+      padding-left: 0px;
+    }
+
+    .intro h2 {
+        margin: 20px 0;
+        color: #333;
+    }
+
+    .intro p {
+        /* color: #666; */
+    }
+
+    h1, h2, h3, p {
+        margin: 0;
+        padding: 0;
+        font-family: georgia;
+    }
+
+    .intro, .features {
+        text-align: center;
+        padding: 20px;
+    }
   </style>
+    
+  <div style="padding-top: 20px"></div> 
+    
+    <header class="header" style="text-align: center">
+        <h1>U.S Real Estate Comparison Tool</h1>
+    </header>
+    
+    <section class="intro">
+        <h2>Explore Different United States's Regions - Find Your Perfect Home</h2>
+        <p>Instantly compare states in the US with our easy-to-use Real Estate Comparison Tool. Get up-to-date statistics and find the best bang for your budget!</p>
+      
+      <div style="padding-top: 20px"></div> 
 
-    <form class="container-fluid">
-        <button class="btn"> <span class="logo-format" >Yes!Houses</span></button>
-        <button class="btn btn-outline-dark btn-space" style="width: 150px; border: solid 5px; background-color: #C4EBFF"><a href="../../index.html" >Home</a></button>
-        <button class="btn btn-outline-dark m-1" style="width: 150px; border: solid 3px; background-color: #C4EBFF" type="button"><a href="about.html" >About</a></button>
-      </form>
-    </nav>
+        <p>Instructions: To use this tool, you just have to scroll down and look at the housing prices between states.</p>
+      <div style="padding-top: 20px"></div> 
 
+        <p>Note: The following list is gathered from Zillow, which consists of average single family home prices of 50 US states + District of Columnbia. Because the list given from Zillow is very extensive with the monthly prices over the span of 24 years, we've decided to only include the average prices of the states every 6 years on January.</p>
+    </section>
+    
+    <div class="h4 pb-2 mb-4 border-bottom border-black"></div>
+
+    <h2 style="text-align: center; font-family: georgia; padding: 20px; font-style: italic;">The list starts here...</h2>
+    
     <div class="container text-center" style="background-color: transparent;">
       <div class="row" style="background-color: transparent;">
         <div class="col" style="background-color: transparent;">
@@ -66,7 +100,6 @@
               {% for state in States %}
               {% for date in Dates %}
               <tr>
-                <!-- <th scope="row">1</th> -->
                 <td>{{state}}</td>
                 <td>{{date}}</td>
               </tr>
@@ -97,145 +130,51 @@
         </div>
       </div>
     </div>
+    <div class="h4 pb-2 mb-4 border-bottom border-black"></div>
 
-    
-    
+    <h2 style="text-align: center; font-family: georgia; padding: 20px; font-style: bold;">About Us</h2>
 
-    
-
-<!-- 
-      <div class="container-hero">
-          <div class="container-hero">
-              <div class="Best-selling-houses">
-                  <i class="fa-solid fa-city"></i>
-                  <div class="rank-houses-in-the-area">
-                      <span class="City">San Diego</span>
-                      <span class="Rank">1</span>
-                  </div>
-              </div>
-
-              <div class="container-logo">
-                  <i class="fa-solid fa-house"></i>
-                  <h1 class="logo"><a href="/">Thinking on Houses</a></h1>
-              </div>
-
-              <div class="container-user">
-                  <i class="fa-solid fa-user"></i>
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  <div class="content-shopping-cart">
-                      <span class="text">Shopping Cart</span>
-                      <span class="number">(0)</span>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="container-navtab">
-          <nav class="navbar container">
-            <i class="fa-duotone fa-bars"></i>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Apartments</a></li>
-                <li><a href="#">Houses</a></li>
-                <li><a href="#">Rentals</a></li>
-                <li><a href="#">More</a></li>
-                <li><a href="#">Contact Us</a></li>                
-            </ul>
-
-            <form class= "search-form">
-                <input type="search" placeholder="Search..." />
-                <button class="btn-submit">
-                    <i class="fa-solid fa-magnifying-glass"</i>
-                </button>
-            </form>
-          </nav>
-      </div>
-    </header>
-
-    <section class="banner">
-      <div class="content-banner">
-          <p>Best City in the country</p>
-          <h2>Best People <br>Best Place to live</h2>
-          <a href="#" class="btn-banner">Explore Now</a>
-      </div>
-    </section>
-
-    <main class="main-content">
-      <section class="container-section-features">
-          <div clss="card-feature">
-              <i class="fa-solid fa-house-user"></i>
-              <div class="feature-content"></div>
-                  <span>Zone of Interest</span>
-                  <p>DEluxe neighborhood</p>
-             </div>
-          </div>
-          <div clss="card-feature">
-              <i class="fa-solid fa-building"></i>
-              <div class="feature-content"></div>
-                  <span>Zone of Interest</span>
-                  <p>Downtown</p>
-              </div>
-          </div>
-          <div clss="card-feature">
-              <i class="fa-solid fa-house-chimney"></i>
-              <div class="feature-content"></div>
-                  <span>Zone of Interest</span>
-                  <p>Urban Zone</p>
-              </div>
-          </div>
-          <div clss="card-feature">
-              <i class="fa-solid fa-house-chimney-window"></i>
-              <div class="feature-content"></div>
-                  <span>Zone of Interest</span>
-                  <p>Rural Zone</p>
-              </div>
-          </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col" style="padding-left: 400px;">
+          <img src="https://media.licdn.com/dms/image/C4E03AQEYxU9YdDhQ-Q/profile-displayphoto-shrink_400_400/0/1626106923222?e=1720051200&v=beta&t=EmtH4wZq1KQZTzy-n1kwLVGzsvzFm3RGFJIb4xyW0fc" class="img-thumbnail" alt="..." style="width:150px; border-color: black; border-width:5px;">
+          <div style="padding-top: 20px"></div> 
+          <p style="background-color: white;">Reid Wilson</p>
+          <p style="background-color: white;">Information System</p>
+          <p style="background-color: white;">Frontend</p>
         </div>
-      </section>
+        
+        <div class="col" style="padding-right: 400px;">
+          <img src="https://media.licdn.com/dms/image/D4D03AQE7hV1SrP0OFw/profile-displayphoto-shrink_400_400/0/1714603450461?e=1720051200&v=beta&t=Y_g0yqycTD4aj8iAyafIYr3iai1l0IHqvdYRUh_WEX8" class="img-thumbnail" alt="..." style="width:150px; border-color: black; border-width:5px;">
+          <div style="padding-top: 20px"></div> 
+          <p style="background-color: white;">Carlos Sanchez</p>
+          <p style="background-color: white;">General Business Administration</p>
+          <p style="background-color: white;">Frontend</p>
+          
+        </div>
+      </div>
+      <div style="padding-top: 20px"></div> 
+      <div class="row">
+        <div class="col" style="padding-left: 400px;">
+          <img src="https://m.media-amazon.com/images/M/MV5BY2I5NzE1YmYtNTgzZC00MjU4LWI5NGItZWJlMzg0ODg1M2JmXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg" class="img-thumbnail" alt="..." style="width:150px; border-color: black; border-width:5px; height: 150px;">
+          <div style="padding-top: 20px"></div> 
+          <p style="background-color: white;">Anthony Balsano</p>
+          <p style="background-color: white;">Information System</p>
+          <p style="background-color: white;">Backend</p>
+        </div>
+        <div class="col" style="padding-right: 400px;">
+          <img src="https://media.licdn.com/dms/image/C5603AQHER-1kz7K5Jw/profile-displayphoto-shrink_400_400/0/1658955815430?e=1720051200&v=beta&t=E6zhWj9Wx2VxyGeom_KhDlraRb9KRs9etP_gYCAuiqI" class="img-thumbnail" alt="..." style="width:150px;  border-color: black; border-width:5px;">
+          <div style="padding-top: 20px"></div> 
+          <p style="background-color: white;">Luan Bui</p>
+          <p style="background-color: white;">Computer Engineering</p>
+          <p style="background-color: white;">Frontend & Backend</p>
+        </div>
+      </div>
+    </div>
 
-      <section class="container-top-properties">
-          <h1 class="heading-1"> Best Sellers</h1>
-          <div class="container-properties">
-              <div class="card-category category Deluxe">
-                  <p>La Jolla</p>
-                  <span>See More</span>
-              </div>
-              <div class="card-category category Downtown">
-                  <p>Coronado</p>
-                  <span>See More</span>
-              </div>
-              <div class="card-category category Rural">
-                <p>Fashion Valley</p>
-                <span>See More</span>
-              </div>
-              <div class="card-category category Urban">
-                  <p>El Cajon</p>
-                  <span>See More</span>
-              </div>
-          </div>
-      </section>
-
-      <section class="container-recomendations">
-          <h1 class="heading-1"> Best Sellers</h1>
-
-          <div class="container-properties">
-              <div class="container-img">
-
-              </div>
-
-          </div>
-
-      </section>
-    </main>
-
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    
-
-
- -->
+    <footer>
+      <p style="padding-top: 50px;">Credit: <a href="https://cdn.wallpapersafari.com/0/38/Bcsfi8.jpg" style="color:white;">Image by Wallpaper Safari</a></p>
+    </footer>
     
   </body>
 </html>
