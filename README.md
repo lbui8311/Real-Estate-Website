@@ -12,5 +12,4 @@ Hello World - Luan-Branch
 
 # Packages:
 1. Django
-2. Requests
-3. Ipware
+2. Pandas
