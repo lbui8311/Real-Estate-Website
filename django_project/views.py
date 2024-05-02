@@ -41,8 +41,6 @@ def index(request):
       if col == '1/31/2024':
         price_group.append(zillow[col][numb])
 
-  # print(price_group)
-
   data = {"States": state_group, "Dates": date_group, "Prices": price_group}
 
   return render(request, 'index.html', context=data)
